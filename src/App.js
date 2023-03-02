@@ -71,7 +71,7 @@ class App extends Component {
   // Submit picture
   onPictureSubmit = () => {
     this.setState({imageUrl: this.state.input})
-    fetch('https://localhost:3008/rankurl', {
+    fetch('https://faceid-app.onrender.com/rankurl', {
       method: 'post',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify ({
@@ -82,7 +82,7 @@ class App extends Component {
     .then(response => {
       if (response) {
         this.displayFaceBox(this.calculateFaceLocation(response))
-        fetch('https://localhost:3008/rank', {
+        fetch('https://faceid-app.onrender.com/rank', {
           method: 'put',
           headers: {'Content-Type': 'application/json'},
           body: JSON.stringify ({

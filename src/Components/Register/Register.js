@@ -24,7 +24,7 @@ class Register extends React.Component {
     }
 
     onSubmitSignIn = () => {
-        fetch('https://jade-faithful-skunk.cyclic.app/register/', {
+        fetch('https://jade-faithful-skunk.cyclic.app/register', {
             method: 'post',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify ({

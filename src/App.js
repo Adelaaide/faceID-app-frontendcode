@@ -71,7 +71,7 @@ class App extends Component {
   // Submit picture
   onPictureSubmit = () => {
     this.setState({imageUrl: this.state.input})
-    fetch('https://jade-faithful-skunk.cyclic.app/rankurl', {
+    fetch('https://jade-faithful-skunk.cyclic.app/imageurl', {
       method: 'post',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify ({
@@ -82,7 +82,7 @@ class App extends Component {
     .then(response => {
       if (response) {
         this.displayFaceBox(this.calculateFaceLocation(response))
-        fetch('https://jade-faithful-skunk.cyclic.app/rank', {
+        fetch('https://jade-faithful-skunk.cyclic.app/image', {
           method: 'put',
           headers: {'Content-Type': 'application/json'},
           body: JSON.stringify ({

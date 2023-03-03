@@ -23,24 +23,26 @@ class Register extends React.Component {
         this.setState({Password: event.target.value})
     }
 
+
     onSubmitSignIn = () => {
-        fetch('https://jade-faithful-skunk.cyclic.app/register', {
-            method: 'post',
-            headers: {'Content-Type': 'application/json'},
-            body: JSON.stringify ({
-                email: this.state.Email,
-                password: this.state.Password,
-                name: this.state.Name
-            })
+      fetch('https://jade-faithful-skunk.cyclic.app/register', {
+        method: 'post',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({
+          email: this.state.email,
+          password: this.state.password,
+          name: this.state.name
         })
-            .then(response => response.json())
-            .then(user => {
-                if (user.id) {
-                    this.props.loadUser(user)
-                    this.props.onRouteChange('home');
-                }
-            })
+      })
+        .then(response => response.json())
+        .then(user => {
+          if (user.id) {
+            this.props.loadUser(user)
+            this.props.onRouteChange('home');
+          }
+        })
     }
+
 
     render() {
         return (

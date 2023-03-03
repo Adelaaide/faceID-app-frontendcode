@@ -1,6 +1,6 @@
 import React from "react";
 // import ReactDOM from 'react-dom';
-import "./Logo.scss"
+import "./Logo.css"
 import Tilt from 'react-parallax-tilt';
 import Brain from "./Brain.png"
 

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import './App.scss';
+import './App.css';
 import Navigation from './Components/Navigation/Navigation';
 import FaceRecognition from './Components/FaceRecognition/FaceRecognition';
 import Logo from './Components/Logo/Logo';

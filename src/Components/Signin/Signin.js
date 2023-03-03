@@ -22,7 +22,7 @@ class Signin extends React.Component {
     }
 
     onSubmitSignIn = () => {
-        fetch('https://jade-faithful-skunk.cyclic.app/signin/', {
+        fetch('https://jade-faithful-skunk.cyclic.app/signin', {
             method: 'post',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify ({
